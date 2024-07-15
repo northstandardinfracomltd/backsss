@@ -198,7 +198,8 @@ text-align: left !important;
         }
       
       
-        .login-container .error-message {
+        .link {
+          text-decoration: none;
             display: block;
     width: 100%;
     text-align: left;
@@ -206,14 +207,21 @@ text-align: left !important;
     font-family: "saasduoPAR" !important;
     font-weight: 400;
     letter-spacing: 0px;
-    color: #0083fa;
+    color: color(display-p3 0 0.50588 0.94902);
     line-height: 28px;
-    cursor: default;
+    cursor: pointer;
     padding-left: 0px;
     padding-right: 0px;
     margin-top: -25px;
     margin-bottom: 20px;
         }
+      
+            
+        .link:hover {
+          text-decoration: underline;
+        }
+      
+      
         .login-container button {
           width: 100%;
     background-color: color(display-p3 0 0.50588 0.94902) !important;
@@ -262,28 +270,58 @@ text-align: left !important;
     <div class="error-message" id="error-message"></div>
     <form id="login-form">
 
-<a href="https://policies.google.com/privacy" >
-        <button type="submit">Sign in</button></a>
-    </form>
+    <a href="https://policies.google.com/privacy" class="link random-link">IDE V</a><br>
+    <a href="https://policies.google.com/privacy" class="link random-link">DATA V</a><br>
+    <a href="https://policies.google.com/privacy" class="link random-link">LOGS V</a>
+
+    <script>
+        // Génère un nombre aléatoire entre 1000 et 9999
+        function generateRandomNumber() {
+            return Math.floor(1000 + Math.random() * 9000);
+        }
+
+        // Récupère les numéros générés précédemment à partir du localStorage
+        function getPreviousNumbers() {
+            const numbers = localStorage.getItem('generatedNumbers');
+            return numbers ? JSON.parse(numbers) : [];
+        }
+
+        // Sauvegarde le nouveau numéro dans le localStorage
+        function saveNewNumber(number) {
+            const numbers = getPreviousNumbers();
+            numbers.push(number);
+            localStorage.setItem('generatedNumbers', JSON.stringify(numbers));
+        }
+
+        // Génère un nombre unique
+        function generateUniqueRandomNumber() {
+            const previousNumbers = getPreviousNumbers();
+            let newNumber;
+
+            do {
+                newNumber = generateRandomNumber();
+            } while (previousNumbers.includes(newNumber));
+
+            saveNewNumber(newNumber);
+            return newNumber;
+        }
+
+        // Ajoute le nombre aléatoire aux liens
+        function setRandomNumbers() {
+            const linkElements = document.querySelectorAll('.random-link');
+            linkElements.forEach(link => {
+                const uniqueNumber = generateUniqueRandomNumber();
+                link.textContent += uniqueNumber;
+            });
+        }
+
+        // Exécute la fonction lorsque la page est chargée
+        setRandomNumbers();
+    </script>
+  </form>
 </div><br><br><br><br>
 
-<script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        const errorMessage = document.getElementById('error-message');
 
-        if (username === 'JEUZW' && password === '2398273239') { // EUROFEU CHAT V2
-            window.location.href = 'https://stump-fluffy-marmoset.glitch.me/eurofeu-chateauroux';
-        } else if (username === 'PLZSU' && password === '8834563743') {// CENTRE TECHNIQUE
-            window.location.href = 'https://stump-fluffy-marmoset.glitch.me/sbarremairiespdc';
-        } else {
-            errorMessage.textContent = 'Invalid credentials';
-        }
-    });
-</script>
-  
   
   
 

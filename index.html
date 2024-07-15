@@ -252,13 +252,38 @@ text-align: left !important;
           format("opentype");
       }
       
+      
+            
+        .link {
+          text-decoration: none;
+            display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 16px !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: color(display-p3 0 0.50588 0.94902);
+    line-height: 28px;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -25px;
+    margin-bottom: 20px;
+        }
+      
+            
+        .link:hover {
+          text-decoration: underline;
+        }
+      
     </style>
 </head>
 <body>
 <br><br>
 <div class="login-container">
     <h2>SaaSduo Kinetic</h2>
-
+    <a href="https://saasduo.com" class="link">Visit SaaSduo.com</a><br>
     <div class="error-message" id="error-message"></div>
     <form id="login-form">
         <div class="input-group">
@@ -280,9 +305,9 @@ text-align: left !important;
         const password = document.getElementById('password').value;
         const errorMessage = document.getElementById('error-message');
 
-        if (username === 'JEUZW' && password === '2398273239') { // EUROFEU CHAT V2
-            window.location.href = 'https://stump-fluffy-marmoset.glitch.me/eurofeu-chateauroux';
-        } else if (username === 'PLZSU' && password === '8834563743') {// CENTRE TECHNIQUE
+        if (username === '94Yd2c' && password === '2398273239') { // EUROFEU CHAT V2
+            window.location.href = '/94Yd2c209382309737203823902893723920370';
+        } else if (username === 'xxxxxx' && password === 'xxxx') {// CENTRE TECHNIQUE
             window.location.href = 'https://stump-fluffy-marmoset.glitch.me/sbarremairiespdc';
         } else {
             errorMessage.textContent = 'Invalid credentials';
