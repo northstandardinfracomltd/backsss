@@ -91,6 +91,8 @@ padding: 16px 24px 24px 24px;
     justify-content: center;
     text-align: center;
     background: #ffffff;
+          width: 90%;
+          max-width: 400px;
         }
         .login-container img {
             max-width: 100px;
@@ -125,6 +127,25 @@ padding-top: 20px;
             margin-bottom: 15px;
             text-align: left;
         }
+      
+              .para {
+            display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 16px !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #000;
+    line-height: 28px;
+    cursor: default;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -25px;
+    margin-bottom: 30px;
+        }
+      
+      
         .login-container .input-group label {
             display: block;
     width: 100%;
@@ -142,19 +163,31 @@ padding-top: 20px;
     margin-bottom: 5px;
         }
         .login-container .input-group input {
-            width: 100%;
-          max-width: 150px;
-            padding: 10px;
-             border: 1px solid #ece7e7;
-            border-radius: 10px;
-                        font-family: "YS5" !important;
+text-align: left !important;
+    background-color: #f6f8fa !important;
+    color: #1e2329;
+    margin-bottom: 12px;
+    border: 0px solid #d0d7de;
+    cursor: pointer;
+    font-family: "saasduoPAR" !important;
     font-weight: 100;
-    letter-spacing: 0px;
-    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-size: 22px;
+    border-radius: 15px !important;
+    margin-left: 0px;
+    height: 54px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 2px;
+              padding-bottom: 2px;
+    z-index: 999999999;
+          max-width: 100px;
+          width: 90% !important;
         }
       
-              .ineos {
-             max-width: 200px !important;
+
+      .ineos  {
+          max-width: 220px !important;
         }
       
       
@@ -204,10 +237,10 @@ padding-top: 20px;
     </style>
 </head>
 <body>
-
+<br><br>
 <div class="login-container">
     <h2>SaaSduo Kinetic</h2>
-              <p class="deskrib">
+              <p class="para">
              Kinetic is a system linked to our physical UK server (backup 1 and production data) and the AWS cloud data center (backup 2). With your access, you can independently retrieve your data and source files in the event of a severe failure or unavailability.
             </p>
     <div class="error-message" id="error-message"></div>
@@ -215,14 +248,14 @@ padding-top: 20px;
         <div class="input-group">
             <label for="username">Your ID</label>
             <input type="text" id="username" name="username" required>
-        </div><br>
+        </div>
         <div class="input-group">
             <label for="password">Your KeyPass</label>
-            <input class="ineos" type="password" id="password" name="password" required>
+            <input class="ineos"  id="password" name="password" required>
         </div>
         <button type="submit">Sign in</button>
     </form>
-</div>
+</div><br><br><br><br>
 
 <script>
     document.getElementById('login-form').addEventListener('submit', function(event) {
