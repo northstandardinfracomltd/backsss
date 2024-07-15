@@ -46,7 +46,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: rgb(244 244 244);
+            background-color: #fff;
           padding: 20px;
         }
       
@@ -59,7 +59,12 @@ src: url("https://cdn.glitch.global/265632e9-1614-48b8-8076-d1fb44326716/AmazonE
 format("opentype");
 }
       
-      
+            @font-face {
+        font-family: saasduoPAR;
+        font-weight: bold;
+        src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
+          format("opentype");
+      }
       
           @font-face {
 font-family: YS5X;
@@ -80,13 +85,12 @@ format("opentype");
       
       
         .login-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 18px;
-          border: 1px solid #ece7e7;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
+padding: 16px 24px 24px 24px;
+    border: 1px solid #ebe5ebc9;
+    border-radius: 23px;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
         }
         .login-container img {
             max-width: 100px;
@@ -123,14 +127,19 @@ padding-top: 20px;
         }
         .login-container .input-group label {
             display: block;
-            margin-bottom: 5px;
-              font-family: "YS5" !important;
-    font-weight: 100;
+    width: 100%;
+    text-align: left;
+    font-size: 24px !important;
+    font-family: "saasduoPAR" !important;
+    font-weight: 400;
     letter-spacing: 0px;
-    font-size: 16px;
-padding-top: 0px;
-          padding-bottom: 10px;
-          padding-left: 0px;
+    color: #000;
+    line-height: 41px;
+    cursor: default;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 18px;
+    margin-bottom: 5px;
         }
         .login-container .input-group input {
             width: 100%;
@@ -155,24 +164,43 @@ padding-top: 0px;
             margin-bottom: 15px;
         }
         .login-container button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(45deg,#0092f3,#0F79AF);
-            border: none;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-          
-                        font-family: "YS5" !important;
+          width: 100%;
+    background-color: color(display-p3 0 0.50588 0.94902) !important;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "saasduoPAR" !important;
     font-weight: 100;
-    letter-spacing: 0px;
-    font-size: 20px;
-          margin-top:30px;
+    letter-spacing: -0.2px;
+    font-size: 22px;
+    border-radius: 15px !important;
+    margin-left: 0px;
+          margin-top: 10px;
+    height: 55px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 9px;
         }
+      
+      .login-container button:hover {
+    box-shadow: 0 0 0px 4px #008eff38;
+    cursor: pointer;
+    transition-duration: 0s;
+}
+      
+      
         .login-container button:hover {
             background-color: #218838;
         }
+      
+            @font-face {
+        font-family: saasduoTIL;
+        font-weight: bold;
+        src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+          format("opentype");
+      }
+      
     </style>
 </head>
 <body>
@@ -180,7 +208,7 @@ padding-top: 0px;
 <div class="login-container">
     <h2>SaaSduo Kinetic</h2>
               <p class="deskrib">
-             Synchronisation de vos outils favoris et intégration des services API de partenaires tiers
+             Kinetic is a system linked to our physical UK server (backup 1 and production data) and the AWS cloud data center (backup 2). With your access, you can independently retrieve your data and source files in the event of a severe failure or unavailability.
             </p>
     <div class="error-message" id="error-message"></div>
     <form id="login-form">
@@ -192,7 +220,7 @@ padding-top: 0px;
             <label for="password">Your KeyPass</label>
             <input class="ineos" type="password" id="password" name="password" required>
         </div>
-        <button type="submit">Download</button>
+        <button type="submit">Sign in</button>
     </form>
 </div>
 
